@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/DiffuseAi.jpeg') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Chatbot</h1>
+        </header>
+
+        <main>
+            <section id="model-change-section">
+                <h2>Change Model</h2>
+                <form id="model-form">
+                    <div class="form-group">
+                        <label for="model_name">Model Name:</label>
+                        <select id="model_name" name="model_name" required>
+                            <option value="gpt2-medium" {% if model_name == 'gpt2-medium' %} selected {% endif %}>GPT-2 Medium</option>
+                            <option value="gpt2-large" {% if model_name == 'gpt2-large' %} selected {% endif %}>GPT-2 Large</option>
+                        </select>
+                    </div>
+                    <button type="submit">Change Model</button>
+                </form>
+            </section>
+
+            <section id="text-generation-section">
+                <h2>Input Content</h2>
+                <form id="generate-form">
+                    <div class="form-group">
+                        <label for="input_text">Input Text:</label>
+                        <textarea id="input_text" name="input_text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Generate</button>
+                </form>
+            </section>
+
+            <section id="response-section">
+                <h3>Generated Content</h3>
+                <div id="loading-spinner" class="loading-spinner"></div>
+                <div id="output" class="response-box"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by Hugging Face Models</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('generate-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const spinner = document.getElementById('loading-spinner');
+            const output = document.getElementById('output');
+            const responseSection = document.getElementById('response-section');
+
+            // Show loading spinner and hide response box
+            spinner.style.display = 'block';
+            output.style.display = 'none';
+
+            fetch('/generate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading spinner and show response box
+                spinner.style.display = 'none';
+                output.style.display = 'block';
+
+                output.textContent = data.generated_text;
+
+                // Adjust height dynamically
+                output.style.height = 'auto'; // Reset height to auto
+                const contentHeight = output.scrollHeight; // Get the full height of the content
+                output.style.height = `${contentHeight}px`; // Set height based on content
+            })
+            .catch(err => {
+                // Hide loading spinner and show response box
+                spinner.style.display = 'none';
+                output.style.display = 'block';
+
+                alert("An error occurred: " + err.message);
+            });
+        });
+
+        document.getElementById('model-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            fetch('/change_model', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(`Model changed to: ${data.model_name}`);
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            })
+            .catch(err => {
+                alert("An error occurred: " + err.message);
+            });
+        });
+    </script>
+</body>
+</html>
