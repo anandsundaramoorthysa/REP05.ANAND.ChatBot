@@ -42,7 +42,7 @@ Before you begin, ensure you have:
 
 - **Python 3.9.13** installed on your system. [Download here](https://www.python.org/downloads/release/python-3913/).
 - **Git** (optional, to clone the repository).
-  
+
 ### Installation
 
 1. **Clone the Repository**:
@@ -126,4 +126,4 @@ For any inquiries or if you need further assistance, please contact me at:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/a1n13a1n13d4/REP05.ANAND.ChatBot/blob/main/LICENSE) file for details.
