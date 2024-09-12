@@ -12,7 +12,7 @@ model_names = {
 }
 
 current_model_name = "gpt2-medium"
-model_dir = os.getenv('MODEL_DIR', 'D:/Machine_Learning_DiffuseAi/Project/chatbot/models/')
+model_dir = os.getenv('MODEL_DIR', '/models/')
 
 # Predefined responses
 simple_responses = {
