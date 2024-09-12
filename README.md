@@ -54,15 +54,31 @@ Before you begin, ensure you have:
    cd REP05.ANAND.ChatBot
    ```
 
-2. **Run the `setup.bat` Script**:
+2. **Option 1: Run the `setup.bat` Script**
 
-   The `setup.bat` file automates the setup process, which includes checking your Python version, creating a virtual environment, installing dependencies, and running the app.
+   The `setup.bat` file automates the setup process, including checking your Python version, creating a virtual environment, installing dependencies, and running the app.
 
    - **Double-click** `setup.bat` or run it from the command line:
    
      ```bash
      .\setup.bat
      ```
+
+3. **Option 2: Install Dependencies Manually**
+
+   If you prefer to install dependencies manually, run the following command:
+
+   ```bash
+   pip install blinker==1.8.2 certifi==2024.8.30 charset-normalizer==3.3.2 click==8.1.7 colorama==0.4.6 diffusers==0.30.2 filelock==3.16.0 Flask==3.0.3 fsspec==2024.9.0 huggingface-hub==0.24.6 idna==3.8 importlib_metadata==8.5.0 itsdangerous==2.2.0 Jinja2==3.1.4 MarkupSafe==2.1.5 mpmath==1.3.0 networkx==3.2.1 numpy==2.0.2 packaging==24.1 pillow==10.4.0 pip==24.2 psutil==6.0.0 PyYAML==6.0.2 regex==2024.7.24 requests==2.32.3 safetensors==0.4.5 setuptools==58.1.0 sympy==1.13.2 tokenizers==0.19.1 torch==2.4.1 tqdm==4.66.5 transformers==4.44.2 typing_extensions==4.12.2 urllib3==2.2.2 Werkzeug==3.0.4 zipp==3.20.1
+   ```
+
+4. **Option 3: Use a `requirements.txt` File**
+
+   Alternatively, you can save the dependencies in a `requirements.txt` file and install them with:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 #### What the script does:
 - **Python Version Check**: The script checks if Python 3.9.13 is installed. If the version is incorrect, it will stop and ask you to install the required version.
