@@ -87,6 +87,11 @@ To manually run the app after setup:
 
 - **Python Version Errors**: If you get an error about the Python version, make sure you have exactly Python 3.9.13 installed.
 - **Model Loading Delays**: GPT-2 models may take time to download the first time they are used. Be patient while the models are cached.
+- **Path Issue:**: When they coding not worked even after run the setup.bat file. In the app.py the had line
+```bash
+model_dir = os.getenv('MODEL_DIR', '/models/')
+```
+- Replace the path with your system had models folder path.
 
 ## Contributing
 
