@@ -1,6 +1,8 @@
 # AI Chatbot Setup
 
-This project contains an AI-powered chatbot that leverages Hugging Face's GPT-2 models for text generation. It features a simple Flask web interface to interact with the chatbot. This guide will walk you through setting up the environment, installing dependencies, and running the chatbot.
+This project contains an AI-powered chatbot that leverages Hugging Face's GPT-2 models for text generation. It features a simple Flask web interface to interact with the chatbot. This guide will walk you through setting up the environment, installing dependencies, and running the chatbot. 
+
+**Note:**: You must clone/install and use folder in name "chatbot"
 
 ## Table of Contents
 
@@ -92,6 +94,7 @@ To manually run the app after setup:
 model_dir = os.getenv('MODEL_DIR', '/models/')
 ```
 - Replace the path with your system had models folder path.
+- **Folder Name:**: The Folder Name must in "chatbot".
 
 ## Contributing
 
