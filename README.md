@@ -96,7 +96,7 @@ We welcome contributions from the community! To contribute, please follow these 
 
 2. **Clone Your Fork**:
    ```bash
-   git clone https://github.com/your-username/REP05.ANAND.ChatBot.git
+   git clone https://github.com/a1n13a1n13d4/REP05.ANAND.ChatBot.git
    cd REP05.ANAND.ChatBot
    ```
 
