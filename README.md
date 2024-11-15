@@ -154,7 +154,7 @@ If you have any questions or would like to collaborate, feel free to reach out:
 
 - **Email**: [sanand03072005@gmail.com](mailto:sanand03072005@gmail.com?subject=Enquiry%20about%20Chat%20Bot%20Project&body=Dear%20Gagan,%0A%0A%20I%20have%20an%20enquiry%20about%20the%20Chat%20Bot%20Project.%20Please%20provide%20the%20necessary%20details.%0A%0A%20Thank%20you.%0A%0A%20Best%20regards,%0A%20[Your%20Name])
 
-- **LinkedIn**: [Anand S](https://www.linkedin.com/in/anandsundaramoorthysa/)
+- **LinkedIn**: [ANAND SUNDARAMOORTHY SA](https://www.linkedin.com/in/anandsundaramoorthysa/)
 
 ## Acknowledge
 
