@@ -1,8 +1,8 @@
 # AI Chatbot Setup
 
-This project contains an AI-powered chatbot that leverages Hugging Face's GPT-2 models for text generation. It features a simple Flask web interface to interact with the chatbot. This guide will walk you through setting up the environment, installing dependencies, and running the chatbot. 
+This project contains an AI-powered chatbot that leverages Hugging Face's GPT-2 models for text generation. It features a simple Flask web interface to interact with the chatbot. This guide will walk you through setting up the environment, installing dependencies, and running the chatbot.
 
-**Note:**: You must clone/install and use folder in name "chatbot"
+**Note**: You must clone/install and use the folder named "chatbot".
 
 ## Table of Contents
 
@@ -16,6 +16,8 @@ This project contains an AI-powered chatbot that leverages Hugging Face's GPT-2 
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact Me](#contact-me)
+- [Acknowledge](#acknowledge)
 
 ## Project Overview
 
@@ -50,7 +52,7 @@ Before you begin, ensure you have:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/a1n13a1n13d4/REP05.ANAND.ChatBot/
+   git clone https://github.com/anandsundaramoorthysa/REP05.ANAND.ChatBot/
    cd REP05.ANAND.ChatBot
    ```
 
@@ -105,14 +107,14 @@ To manually run the app after setup:
 
 - **Python Version Errors**: If you get an error about the Python version, make sure you have exactly Python 3.9.13 installed.
 - **Model Loading Delays**: GPT-2 models may take time to download the first time they are used. Be patient while the models are cached.
-- **Path Issue:**: When they coding not worked even after run the setup.bat file. In the app.py the had line
-```bash
-model_dir = os.getenv('MODEL_DIR', '/models/')
-```
-- Replace the path with your system had models folder path.
-- **Folder Name:**: The Folder Name must in "chatbot".
+- **Path Issue**: If the code does not work even after running the `setup.bat` file, make sure to replace the path in `app.py`:
+   ```bash
+   model_dir = os.getenv('MODEL_DIR', '/models/')
+   ```
+   - Replace `/models/` with the correct path where your models are stored.
+   - **Folder Name**: The folder name must be "chatbot".
 
-## Contributing
+## Contribution
 
 We welcome contributions from the community! To contribute, please follow these steps:
 
@@ -120,7 +122,7 @@ We welcome contributions from the community! To contribute, please follow these 
 
 2. **Clone Your Fork**:
    ```bash
-   git clone https://github.com/a1n13a1n13d4/REP05.ANAND.ChatBot.git
+   git clone https://github.com/anandsundaramoorthysa/REP05.ANAND.ChatBot.git
    cd REP05.ANAND.ChatBot
    ```
 
@@ -142,12 +144,18 @@ We welcome contributions from the community! To contribute, please follow these 
 
 6. **Submit a Pull Request**: Go to the original repository and submit a pull request for review.
 
-For any inquiries or if you need further assistance, please contact me at:
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/anandsundaramoorthysa/REP05.ANAND.ChatBot/blob/main/LICENSE) file for details.
+
+## Contact Me
+
+If you have any questions or would like to collaborate, feel free to reach out:
 
 - **Email**: [sanand03072005@gmail.com](mailto:sanand03072005@gmail.com?subject=Enquiry%20about%20Chat%20Bot%20Project&body=Dear%20Gagan,%0A%0A%20I%20have%20an%20enquiry%20about%20the%20Chat%20Bot%20Project.%20Please%20provide%20the%20necessary%20details.%0A%0A%20Thank%20you.%0A%0A%20Best%20regards,%0A%20[Your%20Name])
 
-- **LinkedIn**: [Anand S](https://www.linkedin.com/in/anands37/)
+- **LinkedIn**: [Anand S](https://www.linkedin.com/in/anandsundaramoorthysa/)
 
-## License
+## Acknowledge
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/a1n13a1n13d4/REP05.ANAND.ChatBot/blob/main/LICENSE) file for details.
+We acknowledge the use of pre-trained models from Hugging Face and other open-source libraries that made this project possible.
